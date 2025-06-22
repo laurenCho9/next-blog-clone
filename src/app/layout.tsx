@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     // sans.className: Open_Sans font 지정
     <html lang="en" className={sans.className}>
-      <body>
+      {/* w-full 너비 꽉 채우지만 max-w-screen-2xl 까지만으로 제한(1536px) */}
+      <body className="flex flex-col w-full max-w-screen-2xl mx-auto">
         <Header />
-        <main>{children}</main>
+        {/* grow: 위아래 꽉 채우기 */}
+        <main className="grow bg-sky-400">{children}</main>
         <Footer />
       </body>
     </html>
